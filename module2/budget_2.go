@@ -83,7 +83,7 @@ func CreateBudget(month time.Month, max float32) (*Budget, error) {
 	}
 	budget.Max = max
 	newBudget = &budget
-	newBudget = report[month]
+	report[month] = &budget
 	return newBudget, nil
 }
 
